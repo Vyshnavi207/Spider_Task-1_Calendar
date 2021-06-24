@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="NewDate()">
+    <div class="container">
+        <div class="calendar">
+            <div  id="ClockDisplay" class="clock"></div>
+            <div class="month">
+                <div class="prev" onclick="moveDate('prev')">
+                    <span>&#10094</span>
+                </div>
+                <div>
+                    <h1 id="month">June</h1>
+                    <h2 id="date"></h2>
+                </div>
+                <div class="next" onclick="moveDate('next')">
+                    <span>&#10095</span>
+                </div>
+            </div>
+            <div class="week">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days"></div>
+        </div>
+    </div>
+    <div id="container2">
+          <div id="manage" class="change">
+            <div id="use" class="popup">
+                <div class="close" onclick="openPopUp('closePop');">&times;</div>
+                    <div class="display"></div>
+                    <input id="event" type="text" placeholder="Event Name">
+                    <button id="save" onclick="saveEvent();">Add event</button>
+            </div>
+        </div>
+    </div>
+    <script src="calendar.js"></script>
+</body>
+</html>

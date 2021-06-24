@@ -1,0 +1,225 @@
+body{
+    margin: 0;   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .container{
+     height: 100vh;
+     width: 100vw;
+     background-color: #dfe6e9;
+     display: flex;
+ }
+ .calendar{
+     margin: auto;
+     width: 600px;
+     background-color:#fff;
+     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.2);
+     
+ }
+ .clock {
+    width: 100%;
+    color: #fff;
+    background-color:#29b6f6 ;
+    font-size: 50px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px ;
+    
+}
+
+ .month{
+    
+     width: 100%;
+     background-color:#29b6f6;
+     color: #fff;
+     display: flex;
+     justify-content: space-between;
+     text-align:center;
+     align-items: center;
+     padding: 20px 30px;
+ }
+ .week{
+     display: flex;
+     background-color: #0288d1;
+     color: #fff;
+     padding: 7px 0;
+ }
+
+ .days{
+     display: flex;
+     flex-wrap: wrap;
+     font-weight:300;
+     padding:10px 0;
+     
+ }
+ .days div{
+    margin-bottom: 10px;
+    padding:10px 0;
+    transition:all 0.4s ;
+ }
+
+ .week div,
+ .days div{
+    width: 14.28%;
+    text-align: center;
+ }
+
+ .days div:hover{
+     background-color: #dfe6e9;
+     cursor: pointer;
+
+ }
+
+ .today{
+     background-color:#0288d1 ;
+     color: #fff;
+ }
+ .prev_date{
+    color: #999;
+ }
+ #month{
+     font-size:40px;
+     font-weight: 500;
+ }
+ #date{
+    font-size:25px;
+    font-weight: 300;
+
+ }
+
+ .prev,
+ .next{
+     margin-bottom: 60px;
+     width: 50px;
+     height: 50px;
+     background-color: rgba(0,0,0,0.1);
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 23px;
+     transition: all 0.4s;
+ }
+
+
+ .prev:hover,
+ .next:hover{
+     background-color: rgba(0,0,0,0.2);
+     cursor: pointer;
+ }
+
+.change{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.popup{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%)  ;
+    background: #fff;
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+
+#save{
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.2rem;
+    color: #fff;
+    background: #0288d1;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    width: 125px;
+    height: 50px;
+}
+#save:hover{
+    background:transparent ;
+    border: 2px solid black;
+    transition:200ms;
+    transform:scale(1.1) ;
+    color:black;
+
+}
+#remove{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.2rem;
+    color: #fff;
+    background: red;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    width: 125px;
+    height: 50px;    
+}
+#remove:hover{
+    background:transparent ;
+    border: 2px solid black;
+    transition:200ms;
+    transform:scale(1.1) ;
+    color: black;
+
+}
+#submit{
+    height: 50px;
+    width: 70px;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    text-align: center;
+    position: relative;
+
+}
+
+
+input{
+    width: 70%;
+    display: block;
+    margin: 40px auto;
+    font-size: 25px;
+    
+}
+.close{
+    
+    position: absolute;
+    top: 0px;
+    right: 14px;
+    font-size: 42px;
+    cursor: pointer;
+    color:black;
+    border-radius: 50%;
+    
+}
+
+
+
+
+
