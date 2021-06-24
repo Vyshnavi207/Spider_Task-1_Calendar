@@ -42,6 +42,7 @@ body{
      text-align:center;
      align-items: center;
      padding: 20px 30px;
+     box-sizing: border-box;
  }
  .week{
      display: flex;
@@ -55,7 +56,7 @@ body{
      flex-wrap: wrap;
      font-weight:300;
      padding:10px 0;
-     
+
  }
  .days div{
     margin-bottom: 10px;
@@ -130,16 +131,34 @@ body{
     left: 50%;
     transform: translate(-50%,-50%)  ;
     background: #fff;
-    width: 450px;
-    height: 220px;
+    width: 500px;
     z-index: 2;
     text-align: center;
     padding: 20px;
-    box-sizing: border-box;
+    
     
 }
+.remove{
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.2rem;
+    color: #fff;
+    background: red;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
 
-
+}
+.display{
+    width: 70%;
+    display: block;
+    margin: 5px auto;
+    font-size: 35px;    
+}
 #save{
     justify-content: center;
     align-items: center;
@@ -201,10 +220,11 @@ body{
 
 
 input{
-    width: 70%;
+    width: 80%;
     display: block;
     margin: 40px auto;
     font-size: 25px;
+    border:2px solid black;
     
 }
 .close{

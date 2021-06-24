@@ -1,7 +1,7 @@
 var date = new Date();
 
 function NewDate(){
-date.setDate(1);
+    date.setDate(1);
 
 var day= date.getDay();
 
@@ -81,19 +81,19 @@ function openPopUp(para){
  var Save =document.getElementById("save");
  var Remove=document.getElementById("remove");
  var events = "";
- var eventid=1;
+ var eventid=0;
  
  function saveEvent(){
      eventid=eventid+1;
      localStorage.setItem(eventid,Event.value);
-     events = events + "<div>"+localStorage.getItem(eventid)+"<button onclick=removeEvent();> Remove </button>"+"</div>"
+     events = events + "<div id="+eventid+">"+localStorage.getItem(eventid)+"<button class='remove' onclick=removeEvent("+eventid+");> Remove </button>"+"</div>"
      document.getElementsByClassName("display")[0].innerHTML = events;
- 
- 
  }
- function removeEvent(){
+
+ function removeEvent(eventid){
      localStorage.removeItem(eventid);
-     
+     document.getElementById(eventid).remove();
+
  }
 
 
@@ -130,3 +130,4 @@ function openPopUp(para){
     
  
  
+
